@@ -1,0 +1,26 @@
+{
+  "name": "acme-products",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/murray-berkowitz/acme-products.git"
+  },
+  "author": "Murray Berkowitz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/murray-berkowitz/acme-products/issues"
+  },
+  "homepage": "https://github.com/murray-berkowitz/acme-products#readme",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "lodash": "^4.17.4",
+    "method-override": "^2.3.9",
+    "nunjucks": "^3.0.1"
+  }
+}

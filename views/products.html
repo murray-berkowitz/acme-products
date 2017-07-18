@@ -1,0 +1,31 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+	
+	<form action="/products" method="POST">
+      <label for="product_field">Name: </label>
+      <input placeholder='Product' name="product" type="text" id="product_field" />
+      <br/>
+      <label for="ranking_field">Text: </label><input name="ranking" placeholder = 'Ranking' type="text" id="ranking_field"/>
+      <br/>
+      <label for="photo_field">Image URL: </label><input name="photo" placeholder = 'Image URL' type="text" id="photo_field"/>
+
+      <input type="submit" value="Submit" />
+    </form>
+
+	<section class="product-container span12">
+		{% for product in products %}
+		<div class="span12 product flex">
+			<div class="product-img">
+				<img src={{product.photo}} alt="">
+			</div>
+			<div class='product-text'>
+				<a href='/products/{{product.id}}'><h4>{{product.product}}</h4></a>
+				<h4 class="ranking">{{product.ranking}}</h4>
+			</div>
+		</div>
+		{% endfor %}
+	</section>
+
+
+{% endblock %}

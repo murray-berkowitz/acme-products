@@ -1,0 +1,20 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+	<h1>Our Highest Ranked Product Is:</h1>	
+	<section class="product-container span12">
+		{% for product in products %}
+		<div class="span12 product flex">
+			<div class="product-img">
+				<img src={{product.photo}} alt="">
+			</div>
+			<div class='product-text'>
+				<a href='/products/{{product.id}}'><h4>{{product.product}}</h4></a>
+				<h4 class="ranking">{{product.ranking}}</h4>
+			</div>
+		</div>
+		{% endfor %}
+	</section>
+
+{% endblock %}

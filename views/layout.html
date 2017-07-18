@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Acme Products</title>
+</head>
+<style>
+	body {
+		background-color: #006BB6;
+	}
+	
+	section {
+		margin:2em 0;
+	}
+	
+	h1 {
+		color:white;
+	}
+
+	.span12 {
+		width:100%;
+	}
+	.wrapper {
+		max-width: 980px;
+		margin:0 auto;
+	}
+	.logo-container {
+		width:75px;
+		display: inline-block;
+	}
+	.logo-container img {
+		border-radius: 50%;
+	}
+	.nav {
+		position:relative;
+	}
+	.flex {
+		display: flex;
+		align-items: center;
+  		justify-content: left;
+	}
+	.navItems {
+		position: absolute;
+		margin-left:2em; 
+		top: 50%;
+		transform: translateY(-50%);
+	}
+	.navItems, .navItems a {
+		display: inline-block;;
+	}
+	.navItems a {
+		padding:0 6px;
+		color:white;
+		text-decoration: none;
+	}
+
+	.product-container .product {
+		border:2px solid white;
+		border-radius: 4px;
+		padding:8px;
+		margin:1.25em 0;
+	}
+	.product h4 {
+		display: inline-block;
+		margin: 0;
+		color:white;
+	}
+	.product-img {
+		width:10%;
+		display: inline-block;
+		margin-right:1.5em;
+	}
+	.product-text {
+		width: 90%;
+	}
+	.product-text .ranking{
+		float: right;
+	}
+	img {
+		max-width: 100%;
+		max-height:100%;
+	}
+</style>
+<body>
+	<div id="main">
+		<div class="wrapper">
+			<section class="nav span12">
+				<div class="logo-container">
+					<img src="http://sports.cbsimg.net/images/nba/logos/500x500/PHI.png" alt="">
+				</div>
+				<div class="navItems">
+					<a href="/">Home</a>
+					<a href="/products">All Products</a>
+				</div>
+			</section>
+
+			<section class="content">
+				{% block content %}Trust The Process{% endblock %}
+			</section>
+		</div>
+	</div>
+</body>
+</html>
